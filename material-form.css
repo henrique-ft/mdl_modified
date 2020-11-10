@@ -1,11 +1,14 @@
-/* ----------------------- @FORM ----------------------- */
-.m-select {
+/* === @FORM === */
+
+/* ===== SELECT ===== */
+
+.material-select {
   position: relative;
   width: 276px;
   margin-top: 19px;
 }
 
-.m-select-text {
+.material-select-text {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -21,31 +24,32 @@
   border-bottom: 1px solid rgba(0,0,0,0.6);
   color: rgba(0,0,0,0.87);
   cursor: pointer;
+  font-size: 1em;
 }
 
-.m-select-text:focus {
+.material-select-text:focus {
   outline: none;
   border-bottom: 1px solid rgba(0,0,0, 0);
 }
 
-.m-select-text:hover {
+.material-select-text:hover {
   background-color: rgba(0,0,0,0.08);
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
 }
 
-.m-select-text:hover:not(:focus) {
+.material-select-text:hover:not(:focus) {
   border-bottom-color: rgba(0,0,0,0.87);
 }
 
-.m-select .m-select-text {
+.material-select .material-select-text {
   -moz-appearance: none;
   appearance: none;
   -webkit-appearance:none
 }
 
-.m-select:after {
+.material-select:after {
   position: absolute;
   top: 18px;
   right: 10px;
@@ -59,7 +63,7 @@
   pointer-events: none;
 }
 
-.m-select-label {
+.material-select-label {
   color: #636363;
   font-weight: normal;
   position: absolute;
@@ -72,11 +76,11 @@
   font-size: 16px;
 }
 
-.m-select-text:focus ~ .m-select-label {
+.material-select-text:focus ~ .material-select-label {
   color: #2196f3;
 }
 
-.m-select-text:focus ~ .m-select-label, .m-select-text:valid ~ .m-select-label {
+.material-select-text:focus ~ .material-select-label, .material-select-text:valid ~ .material-select-label {
   top: 7px;
   left: 12px;
   -webkit-transition: 0.2s ease all;
@@ -85,13 +89,13 @@
   font-size: 12px;
 }
 
-.m-select-bar {
+.material-select-bar {
   position: relative;
   display: block;
   width: 276px;
 }
 
-.m-select-bar:before, .m-select-bar:after {
+.material-select-bar:before, .material-select-bar:after {
   content: '';
   height: 2px;
   width: 0;
@@ -103,19 +107,19 @@
   transition: 0.2s ease all;
 }
 
-.m-select-bar:before {
+.material-select-bar:before {
   left: 50%;
 }
 
-.m-select-bar:after {
+.material-select-bar:after {
   right: 50%;
 }
 
-.m-select-text:focus ~ .m-select-bar:before, .m-select-text:focus ~ .m-select-bar:after {
+.material-select-text:focus ~ .material-select-bar:before, .material-select-text:focus ~ .material-select-bar:after {
   width: 50%;
 }
 
-.m-select-highlight {
+.material-select-highlight {
   position: absolute;
   height: 60%;
   width: 100px;
@@ -126,11 +130,15 @@
 }
 
 @supports (-moz-appearance:none) {
-  .m-active-underline { height: 46px; }
-  .m-select-text {padding-left: 7px;}
+  .material-active-underline { height: 46px; }
+  .material-select-text {padding-left: 7px;}
 }
 
-.m-checkbox {
+
+/* ===== CHECKBOX ===== */
+
+/* Checkbox */
+.material-checkbox {
   z-index: 0;
   position: relative;
   display: inline-block;
@@ -138,7 +146,8 @@
   font-size: 16px;
   line-height: 1.5;
 }
-.m-checkbox > input {
+/* Box */
+.material-checkbox > input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -148,7 +157,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 3px 1px;
-  border: solid 2px;
+  border: solid 2px; /* Safari */
   border-color: rgba(0,0,0, 0.6);
   border-radius: 2px;
   width: 18px;
@@ -159,7 +168,8 @@
   -o-transition: border-color 0.2s, background-color 0.2s;
   transition: border-color 0.2s, background-color 0.2s;
 }
-.m-checkbox > input + span {
+/* Span */
+.material-checkbox > input + span {
   display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -167,7 +177,8 @@
   width: inherit;
   cursor: pointer;
 }
-.m-checkbox > input + span::before {
+/* Highlight */
+.material-checkbox > input + span::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -188,7 +199,8 @@
   transition: opacity 0.3s, transform 0.2s;
   transition: opacity 0.3s, transform 0.2s, -webkit-transform 0.2s;
 }
-.m-checkbox > input + span::after {
+/* Check Mark */
+.material-checkbox > input + span::after {
   content: "";
   z-index: 1;
   display: block;
@@ -210,43 +222,46 @@
   -o-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
-.m-checkbox > input:checked,
-.m-checkbox > input:indeterminate {
-  border-color: rgb(33, 150, 243);
-  background-color: rgb(33, 150, 243);
+/* Checked, Indeterminate */
+.material-checkbox > input:checked,
+.material-checkbox > input:indeterminate {
+  border-color: #2196f3;
+  background-color: #2196f3;
 }
-.m-checkbox > input:checked + span::before,
-.m-checkbox > input:indeterminate + span::before {
-  background-color: rgb(33, 150, 243);
+.material-checkbox > input:checked + span::before,
+.material-checkbox > input:indeterminate + span::before {
+  background-color: #2196f3;
 }
-.m-checkbox > input:checked + span::after,
-.m-checkbox > input:indeterminate + span::after {
+.material-checkbox > input:checked + span::after,
+.material-checkbox > input:indeterminate + span::after {
   border-color: rgb(255, 255, 255);
 }
-.m-checkbox > input:indeterminate + span::after {
+.material-checkbox > input:indeterminate + span::after {
   border-left-width: 0;
   -webkit-transform: translate(4px, 3px);
   -ms-transform: translate(4px, 3px);
   transform: translate(4px, 3px);
 }
-.m-checkbox:hover > input + span::before {
+/* Hover, Focus */
+.material-checkbox:hover > input + span::before {
   opacity: 0.04;
 }
-.m-checkbox > input:focus + span::before {
+.material-checkbox > input:focus + span::before {
   opacity: 0.12;
 }
-.m-checkbox:hover > input:focus + span::before {
+.material-checkbox:hover > input:focus + span::before {
   opacity: 0.16;
 }
-.m-checkbox:active > input,
-.m-checkbox:active:hover > input {
-  border-color: rgb(33, 150, 243);
+/* Active */
+.material-checkbox:active > input,
+.material-checkbox:active:hover > input {
+  border-color: #2196f3;
 }
-.m-checkbox:active > input:checked {
+.material-checkbox:active > input:checked {
   border-color: transparent;
   background-color: rgba(0,0,0, 0.6);
 }
-.m-checkbox:active > input + span::before {
+.material-checkbox:active > input + span::before {
   opacity: 1;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -257,26 +272,30 @@
   transition: transform 0s, opacity 0s;
   transition: transform 0s, opacity 0s, -webkit-transform 0s;
 }
-.m-checkbox > input:disabled {
+/* Disabled */
+.material-checkbox > input:disabled {
   border-color: rgba(0,0,0, 0.38);
   cursor: initial;
 }
-.m-checkbox > input:checked:disabled,
-.m-checkbox > input:indeterminate:disabled {
+.material-checkbox > input:checked:disabled,
+.material-checkbox > input:indeterminate:disabled {
   border-color: transparent;
   background-color: rgba(0,0,0, 0.38);
 }
-.m-checkbox > input:disabled + span {
+.material-checkbox > input:disabled + span {
   color: rgba(0,0,0, 0.38);
   cursor: initial;
 }
-.m-checkbox > input:disabled + span::before {
+.material-checkbox > input:disabled + span::before {
   opacity: 0;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
-.m-radio {
+
+/* ===== RADIO ===== */
+/* Radio */
+.material-radio {
   z-index: 0;
   position: relative;
   display: inline-block;
@@ -284,7 +303,8 @@
   font-size: 16px;
   line-height: 1.5;
 }
-.m-radio > input {
+/* Circle */
+.material-radio > input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -294,7 +314,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 2px 0;
-  border: solid 2px; 
+  border: solid 2px; /* Safari */
   border-color: rgba(0,0,0, 0.6);
   border-radius: 50%;
   width: 20px;
@@ -305,7 +325,8 @@
   -o-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
-.m-radio > input + span {
+/* Span */
+.material-radio > input + span {
   display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -313,7 +334,8 @@
   width: inherit;
   cursor: pointer;
 }
-.m-radio > input + span::before {
+/* Highlight */
+.material-radio > input + span::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -334,7 +356,8 @@
   transition: opacity 0.3s, transform 0.2s;
   transition: opacity 0.3s, transform 0.2s, -webkit-transform 0.2s;
 }
-.m-radio > input + span::after {
+/* Check Mark */
+.material-radio > input + span::after {
   content: "";
   display: block;
   position: absolute;
@@ -343,7 +366,7 @@
   border-radius: 50%;
   width: 10px;
   height: 10px;
-  background-color: rgb(33, 150, 243);
+  background-color: #2196f3;
   -webkit-transform: translate(5px, 5px) scale(0);
   -ms-transform: translate(5px, 5px) scale(0);
   transform: translate(5px, 5px) scale(0);
@@ -353,40 +376,43 @@
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
-.m-radio > input:checked {
-  border-color: rgb(33, 150, 243);
+/* Checked */
+.material-radio > input:checked {
+  border-color: #2196f3;
 }
-.m-radio > input:checked + span::before {
-  background-color: rgb(33, 150, 243);
+.material-radio > input:checked + span::before {
+  background-color: #2196f3;
 }
-.m-radio > input:checked + span::after {
+.material-radio > input:checked + span::after {
   -webkit-transform: translate(5px, 5px) scale(1);
   -ms-transform: translate(5px, 5px) scale(1);
   transform: translate(5px, 5px) scale(1);
 }
-.m-radio:hover > input + span::before {
+/* Hover, Focus */
+.material-radio:hover > input + span::before {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 0.04;
 }
-.m-radio > input:focus + span::before  {
+.material-radio > input:focus + span::before  {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 0.12;
 }
-.m-radio:hover > input:focus + span::before {
+.material-radio:hover > input:focus + span::before {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 0.16;
 }
-.m-radio:active > input {
-  border-color: rgb(33, 150, 243);
+/* Active */
+.material-radio:active > input {
+  border-color: #2196f3;
 }
-.m-radio:active > input + span::before,
-.m-radio:active:hover > input + span::before {
+.material-radio:active > input + span::before,
+.material-radio:active:hover > input + span::before {
   opacity: 1;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -397,24 +423,29 @@
   transition: transform 0s, opacity 0s;
   transition: transform 0s, opacity 0s, -webkit-transform 0s;
 }
-.m-radio > input:disabled {
+/* Disabled */
+.material-radio > input:disabled {
   border-color: rgba(0,0,0, 0.38);
   cursor: initial;
 }
-.m-radio > input:disabled + span {
+.material-radio > input:disabled + span {
   color: rgba(0,0,0, 0.38);
   cursor: initial;
 }
-.m-radio > input:disabled + span::before {
+.material-radio > input:disabled + span::before {
   opacity: 0;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
-.m-radio > input:disabled + span::after {
+.material-radio > input:disabled + span::after {
   background-color: currentColor;
 }
-.m-switch {
+
+/* ===== SWITCH ===== */
+
+/* Switch */
+.material-switch {
   z-index: 0;
   position: relative;
   display: inline-block;
@@ -422,7 +453,8 @@
   font-size: 16px;
   line-height: 1.5;
 }
-.m-switch > input {
+/* Track */
+.material-switch > input {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -443,7 +475,8 @@
   -o-transition: background-color 0.2s, opacity 0.2s;
   transition: background-color 0.2s, opacity 0.2s;
 }
-.m-switch > input + span {
+/* Span */
+.material-switch > input + span {
   display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -452,7 +485,8 @@
   width: inherit;
   cursor: pointer;
 }
-.m-switch > input + span::before {
+/* Highlight */
+.material-switch > input + span::before {
   content: "";
   position: absolute;
   right: 11px;
@@ -473,7 +507,8 @@
   transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
   transition: opacity 0.3s 0.1s, transform 0.2s 0.1s, -webkit-transform 0.2s 0.1s;
 }
-.m-switch > input + span::after {
+/* Thumb */
+.material-switch > input + span::after {
   content: "";
   z-index: 1;
   position: absolute;
@@ -492,35 +527,38 @@
   transition: background-color 0.2s, transform 0.2s;
   transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
 }
-.m-switch > input:checked {
+/* Checked */
+.material-switch > input:checked {
   background-color: rgba(33, 150, 243, 0.6);
 }
-.m-switch > input:checked + span::before {
+.material-switch > input:checked + span::before {
   right: -5px;
-  background-color: rgb(33, 150, 243);
+  background-color: #2196f3;
 }
-.m-switch > input:checked + span::after {
-  background-color: rgb(33, 150, 243);
+.material-switch > input:checked + span::after {
+  background-color: #2196f3;
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
 }
-.m-switch:hover > input + span::before {
+/* Hover, Focus */
+.material-switch:hover > input + span::before {
   opacity: 0.04;
 }
-.m-switch > input:focus + span::before {
+.material-switch > input:focus + span::before {
   opacity: 0.12;
 }
-.m-switch:hover > input:focus + span::before {
+.material-switch:hover > input:focus + span::before {
   opacity: 0.16;
 }
-.m-switch:active > input {
+/* Active */
+.material-switch:active > input {
   background-color: rgba(33, 150, 243, 0.6);
 }
-.m-switch:active > input:checked {
+.material-switch:active > input:checked {
   background-color: rgba(0,0,0, 0.38);
 }
-.m-switch:active > input + span::before {
+.material-switch:active > input + span::before {
   opacity: 1;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -531,19 +569,20 @@
   transition: transform 0s, opacity 0s;
   transition: transform 0s, opacity 0s, -webkit-transform 0s;
 }
-.m-switch > input:disabled {
+/* Disabled */
+.material-switch > input:disabled {
   background-color: rgba(0,0,0, 0.38);
   opacity: 0.38;
   cursor: default;
 }
-.m-switch > input:checked:disabled {
+.material-switch > input:checked:disabled {
   background-color: rgba(33, 150, 243, 0.6);
 }
-.m-switch > input:disabled + span {
+.material-switch > input:disabled + span {
   color: rgba(0, 0, 0, 0.38);
   cursor: default;
 }
-.m-switch > input:disabled + span::before {
+.material-switch > input:disabled + span::before {
   z-index: 1;
   margin: 10px;
   width: 20px;
@@ -557,17 +596,21 @@
   -o-transition: none;
   transition: none;
 }
-.m-switch > input:disabled + span::after {
+.material-switch > input:disabled + span::after {
   opacity: 0.38;
 }
-.m-textfield-standard {
+
+/* ===== TEXTFIELD STANDARD ===== */
+/* Textfield Standard */
+.material-textfield-standard {
   position: relative;
   display: inline-block;
   font-size: 16px;
   line-height: 1.5;
 }
-.m-textfield-standard > input,
-.m-textfield-standard > textarea {
+/* Input, Textarea */
+.material-textfield-standard > input,
+.material-textfield-standard > textarea {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -579,19 +622,20 @@
   width: 100%;
   height: inherit;
   color: rgba(0,0,0, 0.87);
-  -webkit-text-fill-color: currentColor;
+  -webkit-text-fill-color: currentColor; /* Safari */
   background-color: transparent;
   -webkit-box-shadow: none;
-  box-shadow: none; 
+  box-shadow: none; /* Firefox */
   font-size: inherit;
   line-height: inherit;
-  caret-color: rgb(33, 150, 243);
+  caret-color: #2196f3;
   -webkit-transition: border-bottom 0.2s, background-color 0.2s;
   -o-transition: border-bottom 0.2s, background-color 0.2s;
   transition: border-bottom 0.2s, background-color 0.2s;
 }
-.m-textfield-standard > input + span,
-.m-textfield-standard > textarea + span {
+/* Span */
+.material-textfield-standard > input + span,
+.material-textfield-standard > textarea + span {
   position: absolute;
   top: 0;
   left: 0;
@@ -609,8 +653,9 @@
   -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
   transition: color 0.2s, font-size 0.2s, line-height 0.2s;
 }
-.m-textfield-standard > input + span::after,
-.m-textfield-standard > textarea + span::after {
+/* Underline */
+.material-textfield-standard > input + span::after,
+.material-textfield-standard > textarea + span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -618,7 +663,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: rgb(33, 150, 243);
+  background-color: #2196f3;
   -webkit-transform-origin: bottom center;
   -ms-transform-origin: bottom center;
   transform-origin: bottom center;
@@ -631,60 +676,69 @@
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
-.m-textfield-standard:hover > input,
-.m-textfield-standard:hover > textarea {
+/* Hover */
+.material-textfield-standard:hover > input,
+.material-textfield-standard:hover > textarea {
   border-bottom-color: rgba(0,0,0, 0.87);
 }
-.m-textfield-standard > input:not(:focus):placeholder-shown + span,
-.m-textfield-standard > textarea:not(:focus):placeholder-shown + span {
+/* Placeholder-shown */
+.material-textfield-standard > input:not(:focus):placeholder-shown + span,
+.material-textfield-standard > textarea:not(:focus):placeholder-shown + span {
   font-size: inherit;
   line-height: 56px;
 }
-.m-textfield-standard > input:focus,
-.m-textfield-standard > textarea:focus {
+/* Focus */
+.material-textfield-standard > input:focus,
+.material-textfield-standard > textarea:focus {
   outline: none;
 }
-.m-textfield-standard > input:focus + span,
-.m-textfield-standard > textarea:focus + span {
-  color: rgb(33, 150, 243);
+.material-textfield-standard > input:focus + span,
+.material-textfield-standard > textarea:focus + span {
+  color: #2196f3;
 }
-.m-textfield-standard > input:focus + span::after,
-.m-textfield-standard > textarea:focus + span::after {
+.material-textfield-standard > input:focus + span::after,
+.material-textfield-standard > textarea:focus + span::after {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.m-textfield-standard > input:disabled,
-.m-textfield-standard > textarea:disabled {
+/* Disabled */
+.material-textfield-standard > input:disabled,
+.material-textfield-standard > textarea:disabled {
   border-bottom-color: rgba(0,0,0,0.38);
   color: rgba(0,0,0, 0.38);
 }
-.m-textfield-standard > input:disabled + span,
-.m-textfield-standard > textarea:disabled + span {
+.material-textfield-standard > input:disabled + span,
+.material-textfield-standard > textarea:disabled + span {
   color: rgba(0,0,0, 0.38);
 }
+/* Faster transition in Safari for less noticable fractional font-size issue */
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {
-    .m-textfield-standard > input,
-    .m-textfield-standard > input + span,
-    .m-textfield-standard > input + span::after,
-    .m-textfield-standard > textarea,
-    .m-textfield-standard > textarea + span,
-    .m-textfield-standard > textarea + span::after {
+    .material-textfield-standard > input,
+    .material-textfield-standard > input + span,
+    .material-textfield-standard > input + span::after,
+    .material-textfield-standard > textarea,
+    .material-textfield-standard > textarea + span,
+    .material-textfield-standard > textarea + span::after {
       -webkit-transition-duration: 0.1s;
       -o-transition-duration: 0.1s;
       transition-duration: 0.1s;
     }
   }
 }
-.m-textfield-filled {
+
+/* ===== TEXTFIELD FILLED ===== */
+/* Textfield Filled */
+.material-textfield-filled {
   position: relative;
   display: inline-block;
   font-size: 16px;
   line-height: 1.5;
 }
-.m-textfield-filled > input,
-.m-textfield-filled > textarea {
+/* Input, Textarea */
+.material-textfield-filled > input,
+.material-textfield-filled > textarea {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -697,19 +751,20 @@
   width: 100%;
   height: inherit;
   color: rgba(0,0,0, 0.87);
-  -webkit-text-fill-color: currentColor;
+  -webkit-text-fill-color: currentColor; /* Safari */
   background-color: rgba(0,0,0, 0.04);
   -webkit-box-shadow: none;
-  box-shadow: none;
+  box-shadow: none; /* Firefox */
   font-size: inherit;
   line-height: inherit;
-  caret-color: rgb(33, 150, 243);
+  caret-color: #2196f3;
   -webkit-transition: border-bottom 0.2s, background-color 0.2s;
   -o-transition: border-bottom 0.2s, background-color 0.2s;
   transition: border-bottom 0.2s, background-color 0.2s;
 }
-.m-textfield-filled > input + span,
-.m-textfield-filled > textarea + span {
+/* Span */
+.material-textfield-filled > input + span,
+.material-textfield-filled > textarea + span {
   position: absolute;
   top: 0;
   left: 0;
@@ -727,8 +782,9 @@
   -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
   transition: color 0.2s, font-size 0.2s, line-height 0.2s;
 }
-.m-textfield-filled > input + span::after,
-.m-textfield-filled > textarea + span::after {
+/* Underline */
+.material-textfield-filled > input + span::after,
+.material-textfield-filled > textarea + span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -736,7 +792,7 @@
   display: block;
   width: 100%;
   height: 2px;
-  background-color: rgb(33, 150, 243);
+  background-color: #2196f3;
   -webkit-transform-origin: bottom center;
   -ms-transform-origin: bottom center;
   transform-origin: bottom center;
@@ -749,55 +805,63 @@
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.m-textfield-filled:hover > input,
-.m-textfield-filled:hover > textarea {
+/* Hover */
+.material-textfield-filled:hover > input,
+.material-textfield-filled:hover > textarea {
   border-bottom-color: rgba(0,0,0, 0.87);
   background-color: rgba(0,0,0, 0.08);
 }
-.m-textfield-filled > input:not(:focus):placeholder-shown + span,
-.m-textfield-filled > textarea:not(:focus):placeholder-shown + span {
+/* Placeholder-shown */
+.material-textfield-filled > input:not(:focus):placeholder-shown + span,
+.material-textfield-filled > textarea:not(:focus):placeholder-shown + span {
   font-size: inherit;
   line-height: 48px;
 }
-.m-textfield-filled > input:focus,
-.m-textfield-filled > textarea:focus {
+/* Focus */
+.material-textfield-filled > input:focus,
+.material-textfield-filled > textarea:focus {
   outline: none;
 }
-.m-textfield-filled > input:focus + span,
-.m-textfield-filled > textarea:focus + span {
-  color: rgb(33, 150, 243);
+.material-textfield-filled > input:focus + span,
+.material-textfield-filled > textarea:focus + span {
+  color: #2196f3;
 }
-.m-textfield-filled > input:focus + span::after,
-.m-textfield-filled > textarea:focus + span::after {
+.material-textfield-filled > input:focus + span::after,
+.material-textfield-filled > textarea:focus + span::after {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.m-textfield-filled > input:disabled,
-.m-textfield-filled > textarea:disabled {
+/* Disabled */
+.material-textfield-filled > input:disabled,
+.material-textfield-filled > textarea:disabled {
   border-bottom-color: rgba(0,0,0, 0.38);
   color: rgba(0,0,0, 0.38);
   background-color: rgba(0,0,0, 0.24);
 }
-.m-textfield-filled > input:disabled + span,
-.m-textfield-filled > textarea:disabled + span {
+.material-textfield-filled > input:disabled + span,
+.material-textfield-filled > textarea:disabled + span {
   color: rgba(0,0,0, 0.38);
 }
+/* Faster transition in Safari for less noticable fractional font-size issue */
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {
-    .m-textfield-filled > input,
-    .m-textfield-filled > input + span,
-    .m-textfield-filled > input + span::after,
-    .m-textfield-filled > textarea,
-    .m-textfield-filled > textarea + span,
-    .m-textfield-filled > textarea + span::after {
+    .material-textfield-filled > input,
+    .material-textfield-filled > input + span,
+    .material-textfield-filled > input + span::after,
+    .material-textfield-filled > textarea,
+    .material-textfield-filled > textarea + span,
+    .material-textfield-filled > textarea + span::after {
       -webkit-transition-duration: 0.1s;
       -o-transition-duration: 0.1s;
       transition-duration: 0.1s;
     }
   }
 }
-.m-textfield-outlined {
+
+/* ===== TEXTFIELD OUTLINED ===== */
+/* Textfield Outlined */
+.material-textfield-outlined {
   --m-helper-safari1: rgba(0,0,0, 0.38);
   --m-helper-safari2: rgba(0,0,0, 0.6);
   --m-helper-safari3: rgba(0,0,0, 0.87);
@@ -807,8 +871,9 @@
   font-size: 16px;
   line-height: 1.5;
 }
-.m-textfield-outlined > input,
-.m-textfield-outlined > textarea {
+/* Input, Textarea */
+.material-textfield-outlined > input,
+.material-textfield-outlined > textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
@@ -834,12 +899,13 @@
   transition: border 0.2s, box-shadow 0.2s;
   transition: border 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
-.m-textfield-outlined > input:not(:focus):placeholder-shown,
-.m-textfield-outlined > textarea:not(:focus):placeholder-shown {
+.material-textfield-outlined > input:not(:focus):placeholder-shown,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown {
   border-top-color: var(--m-helper-safari2);
 }
-.m-textfield-outlined > input + span,
-.m-textfield-outlined > textarea + span {
+/* Span */
+.material-textfield-outlined > input + span,
+.material-textfield-outlined > textarea + span {
   position: absolute;
   top: 0;
   left: 0;
@@ -856,15 +922,16 @@
   -o-transition: color 0.2s, font-size 0.2s, line-height 0.2s;
   transition: color 0.2s, font-size 0.2s, line-height 0.2s;
 }
-.m-textfield-outlined > input:not(:focus):placeholder-shown + span,
-.m-textfield-outlined > textarea:not(:focus):placeholder-shown + span {
+.material-textfield-outlined > input:not(:focus):placeholder-shown + span,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown + span {
   font-size: inherit;
   line-height: 68px;
 }
-.m-textfield-outlined > input + span::before,
-.m-textfield-outlined > input + span::after,
-.m-textfield-outlined > textarea + span::before,
-.m-textfield-outlined > textarea + span::after {
+/* Corners */
+.material-textfield-outlined > input + span::before,
+.material-textfield-outlined > input + span::after,
+.material-textfield-outlined > textarea + span::before,
+.material-textfield-outlined > textarea + span::after {
   content: "";
   display: block;
   -webkit-box-sizing: border-box;
@@ -883,14 +950,14 @@
   transition: border 0.2s, box-shadow 0.2s;
   transition: border 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
-.m-textfield-outlined > input + span::before,
-.m-textfield-outlined > textarea + span::before {
+.material-textfield-outlined > input + span::before,
+.material-textfield-outlined > textarea + span::before {
   margin-right: 4px;
   border-left: solid 1px transparent;
   border-radius: 4px 0;
 }
-.m-textfield-outlined > input + span::after,
-.m-textfield-outlined > textarea + span::after {
+.material-textfield-outlined > input + span::after,
+.material-textfield-outlined > textarea + span::after {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -898,85 +965,88 @@
   border-right: solid 1px transparent;
   border-radius: 0 4px;
 }
-.m-textfield-outlined > input:not(:focus):placeholder-shown + span::before,
-.m-textfield-outlined > textarea:not(:focus):placeholder-shown + span::before,
-.m-textfield-outlined > input:not(:focus):placeholder-shown + span::after,
-.m-textfield-outlined > textarea:not(:focus):placeholder-shown + span::after {
+.material-textfield-outlined > input:not(:focus):placeholder-shown + span::before,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::before,
+.material-textfield-outlined > input:not(:focus):placeholder-shown + span::after,
+.material-textfield-outlined > textarea:not(:focus):placeholder-shown + span::after {
   border-top-color: transparent;
 }
-.m-textfield-outlined:hover > input,
-.m-textfield-outlined:hover > textarea {
+/* Hover */
+.material-textfield-outlined:hover > input,
+.material-textfield-outlined:hover > textarea {
   border-color: transparent var(--m-helper-safari3) var(--m-helper-safari3);
 }
-.m-textfield-outlined:hover > input + span::before,
-.m-textfield-outlined:hover > textarea + span::before,
-.m-textfield-outlined:hover > input + span::after,
-.m-textfield-outlined:hover > textarea + span::after {
+.material-textfield-outlined:hover > input + span::before,
+.material-textfield-outlined:hover > textarea + span::before,
+.material-textfield-outlined:hover > input + span::after,
+.material-textfield-outlined:hover > textarea + span::after {
   border-top-color: var(--m-helper-safari3);
 }
-.m-textfield-outlined:hover > input:not(:focus):placeholder-shown,
-.m-textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
+.material-textfield-outlined:hover > input:not(:focus):placeholder-shown,
+.material-textfield-outlined:hover > textarea:not(:focus):placeholder-shown {
   border-color: var(--m-helper-safari3);
 }
-.m-textfield-outlined > input:focus,
-.m-textfield-outlined > textarea:focus {
+/* Focus */
+.material-textfield-outlined > input:focus,
+.material-textfield-outlined > textarea:focus {
   border-color: transparent rgb(33,150,243) rgb(33,150,243);
   -webkit-box-shadow: inset 1px 0 rgb(33,150,243), inset -1px 0 rgb(33,150,243), inset 0 -1px rgb(33,150,243);
   box-shadow: inset 1px 0 rgb(33,150,243), inset -1px 0 rgb(33,150,243), inset 0 -1px rgb(33,150,243);
   outline: none;
 }
-.m-textfield-outlined > input:focus + span,
-.m-textfield-outlined > textarea:focus + span {
+.material-textfield-outlined > input:focus + span,
+.material-textfield-outlined > textarea:focus + span {
   color: rgb(33,150,243);
 }
-.m-textfield-outlined > input:focus + span::before,
-.m-textfield-outlined > input:focus + span::after,
-.m-textfield-outlined > textarea:focus + span::before,
-.m-textfield-outlined > textarea:focus + span::after {
+.material-textfield-outlined > input:focus + span::before,
+.material-textfield-outlined > input:focus + span::after,
+.material-textfield-outlined > textarea:focus + span::before,
+.material-textfield-outlined > textarea:focus + span::after {
   border-top-color: rgb(33,150,243) !important;
   -webkit-box-shadow: inset 0 1px rgb(33,150,243);
   box-shadow: inset 0 1px rgb(33,150,243);
 }
-.m-textfield-outlined > input:disabled,
-.m-textfield-outlined > input:disabled + span,
-.m-textfield-outlined > textarea:disabled,
-.m-textfield-outlined > textarea:disabled + span {
+/* Disabled */
+.material-textfield-outlined > input:disabled,
+.material-textfield-outlined > input:disabled + span,
+.material-textfield-outlined > textarea:disabled,
+.material-textfield-outlined > textarea:disabled + span {
   border-color: transparent var(--m-helper-safari1) var(--m-helper-safari1) !important;
   color: rgba(0,0,0, 0.38);
   pointer-events: none;
 }
-.m-textfield-outlined > input:disabled + span::before,
-.m-textfield-outlined > input:disabled + span::after,
-.m-textfield-outlined > textarea:disabled + span::before,
-.m-textfield-outlined > textarea:disabled + span::after {
+.material-textfield-outlined > input:disabled + span::before,
+.material-textfield-outlined > input:disabled + span::after,
+.material-textfield-outlined > textarea:disabled + span::before,
+.material-textfield-outlined > textarea:disabled + span::after {
   border-top-color: var(--m-helper-safari1) !important;
 }
-.m-textfield-outlined > input:disabled:placeholder-shown,
-.m-textfield-outlined > input:disabled:placeholder-shown + span,
-.m-textfield-outlined > textarea:disabled:placeholder-shown,
-.m-textfield-outlined > textarea:disabled:placeholder-shown + span {
+.material-textfield-outlined > input:disabled:placeholder-shown,
+.material-textfield-outlined > input:disabled:placeholder-shown + span,
+.material-textfield-outlined > textarea:disabled:placeholder-shown,
+.material-textfield-outlined > textarea:disabled:placeholder-shown + span {
   border-top-color: var(--m-helper-safari1) !important;
 }
-.m-textfield-outlined > input:disabled:placeholder-shown + span::before,
-.m-textfield-outlined > input:disabled:placeholder-shown + span::after,
-.m-textfield-outlined > textarea:disabled:placeholder-shown + span::before,
-.m-textfield-outlined > textarea:disabled:placeholder-shown + span::after {
+.material-textfield-outlined > input:disabled:placeholder-shown + span::before,
+.material-textfield-outlined > input:disabled:placeholder-shown + span::after,
+.material-textfield-outlined > textarea:disabled:placeholder-shown + span::before,
+.material-textfield-outlined > textarea:disabled:placeholder-shown + span::after {
   border-top-color: transparent !important;
 }
+/* Faster transition in Safari for less noticable fractional font-size issue */
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-appearance:none) {
-    .m-textfield-outlined > input,
-    .m-textfield-outlined > input + span,
-    .m-textfield-outlined > textarea,
-    .m-textfield-outlined > textarea + span,
-    .m-textfield-outlined > input + span::before,
-    .m-textfield-outlined > input + span::after,
-    .m-textfield-outlined > textarea + span::before,
-    .m-textfield-outlined > textarea + span::after {
+    .material-textfield-outlined > input,
+    .material-textfield-outlined > input + span,
+    .material-textfield-outlined > textarea,
+    .material-textfield-outlined > textarea + span,
+    .material-textfield-outlined > input + span::before,
+    .material-textfield-outlined > input + span::after,
+    .material-textfield-outlined > textarea + span::before,
+    .material-textfield-outlined > textarea + span::after {
       -webkit-transition-duration: 0.1s;
       -o-transition-duration: 0.1s;
       transition-duration: 0.1s;
     }
   }
 }
- /* ----------------------- @FORM ----------------------- */

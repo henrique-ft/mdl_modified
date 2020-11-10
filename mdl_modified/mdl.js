@@ -83,7 +83,7 @@
       }
       function a(n, a) {
           if (!("object" == typeof n && n instanceof Element)) throw new Error("Invalid argument provided to upgrade m element.");
-          var l = i("m-componentupgrading", !0, !0);
+          var l = i("mdl-componentupgrading", !0, !0);
           if ((n.dispatchEvent(l), !l.defaultPrevented)) {
               var o = t(n),
                   r = [];
@@ -101,7 +101,7 @@
                   (E[C] = d), p.push(E);
                   for (var m = 0, L = d.callbacks.length; m < L; m++) d.callbacks[m](n);
                   d.widget && (n[d.className] = E);
-                  var I = i("m-componentupgraded", !0, !1);
+                  var I = i("mdl-componentupgraded", !0, !1);
                   n.dispatchEvent(I);
               }
           }
@@ -140,7 +140,7 @@
               var s = e.element_.getAttribute("data-upgraded").split(","),
                   n = s.indexOf(e[C].classAsString);
               s.splice(n, 1), e.element_.setAttribute("data-upgraded", s.join(","));
-              var a = i("m-componentdowngraded", !0, !1);
+              var a = i("mdl-componentdowngraded", !0, !1);
               e.element_.dispatchEvent(a);
           }
       }
@@ -175,7 +175,7 @@
       (window.componentHandler = s),
       window.addEventListener("load", function () {
           "classList" in document.createElement("div") && "querySelector" in document && "addEventListener" in window && Array.prototype.forEach
-              ? (document.documentElement.classList.add("m-js"), s.upgradeAllRegistered())
+              ? (document.documentElement.classList.add("mdl-js"), s.upgradeAllRegistered())
               : ((s.upgradeElement = function () {}), (s.register = function () {}));
       }),
       Date.now ||
@@ -208,7 +208,7 @@
   };
   (window.MaterialButton = o),
       (o.prototype.Constant_ = {}),
-      (o.prototype.CssClasses_ = { RIPPLE_EFFECT: "m-js-ripple-effect", RIPPLE_CONTAINER: "m-button__ripple-container", RIPPLE: "m-ripple" }),
+      (o.prototype.CssClasses_ = { RIPPLE_EFFECT: "mdl-js-ripple-effect", RIPPLE_CONTAINER: "mdl-button__ripple-container", RIPPLE: "mdl-ripple" }),
       (o.prototype.blurHandler_ = function (e) {
           e && this.element_.blur();
       }),
@@ -235,19 +235,19 @@
               (this.boundButtonBlurHandler = this.blurHandler_.bind(this)), this.element_.addEventListener("mouseup", this.boundButtonBlurHandler), this.element_.addEventListener("mouseleave", this.boundButtonBlurHandler);
           }
       }),
-      s.register({ constructor: o, classAsString: "MaterialButton", cssClass: "m-js-button", widget: !0 });
+      s.register({ constructor: o, classAsString: "MaterialButton", cssClass: "mdl-js-button", widget: !0 });
   var _ = function (e) {
       (this.element_ = e), this.init();
   };
   (window.MaterialIconToggle = _),
       (_.prototype.Constant_ = { TINY_TIMEOUT: 0.001 }),
       (_.prototype.CssClasses_ = {
-          INPUT: "m-icon-toggle__input",
-          JS_RIPPLE_EFFECT: "m-js-ripple-effect",
-          RIPPLE_IGNORE_EVENTS: "m-js-ripple-effect--ignore-events",
-          RIPPLE_CONTAINER: "m-icon-toggle__ripple-container",
-          RIPPLE_CENTER: "m-ripple--center",
-          RIPPLE: "m-ripple",
+          INPUT: "mdl-icon-toggle__input",
+          JS_RIPPLE_EFFECT: "mdl-js-ripple-effect",
+          RIPPLE_IGNORE_EVENTS: "mdl-js-ripple-effect--ignore-events",
+          RIPPLE_CONTAINER: "mdl-icon-toggle__ripple-container",
+          RIPPLE_CENTER: "mdl-ripple--center",
+          RIPPLE: "mdl-ripple",
           IS_FOCUSED: "is-focused",
           IS_DISABLED: "is-disabled",
           IS_CHECKED: "is-checked",
@@ -324,7 +324,7 @@
                   this.element_.classList.add("is-upgraded");
           }
       }),
-      s.register({ constructor: _, classAsString: "MaterialIconToggle", cssClass: "m-js-icon-toggle", widget: !0 });
+      s.register({ constructor: _, classAsString: "MaterialIconToggle", cssClass: "mdl-js-icon-toggle", widget: !0 });
   var d = function (e) {
       (this.element_ = e), this.init();
   };
@@ -332,21 +332,21 @@
       (d.prototype.Constant_ = { TRANSITION_DURATION_SECONDS: 0.3, TRANSITION_DURATION_FRACTION: 0.8, CLOSE_TIMEOUT: 150 }),
       (d.prototype.Keycodes_ = { ENTER: 13, ESCAPE: 27, SPACE: 32, UP_ARROW: 38, DOWN_ARROW: 40 }),
       (d.prototype.CssClasses_ = {
-          CONTAINER: "m-menu__container",
-          OUTLINE: "m-menu__outline",
-          ITEM: "m-menu__item",
-          ITEM_RIPPLE_CONTAINER: "m-menu__item-ripple-container",
-          RIPPLE_EFFECT: "m-js-ripple-effect",
-          RIPPLE_IGNORE_EVENTS: "m-js-ripple-effect--ignore-events",
-          RIPPLE: "m-ripple",
+          CONTAINER: "mdl-menu__container",
+          OUTLINE: "mdl-menu__outline",
+          ITEM: "mdl-menu__item",
+          ITEM_RIPPLE_CONTAINER: "mdl-menu__item-ripple-container",
+          RIPPLE_EFFECT: "mdl-js-ripple-effect",
+          RIPPLE_IGNORE_EVENTS: "mdl-js-ripple-effect--ignore-events",
+          RIPPLE: "mdl-ripple",
           IS_UPGRADED: "is-upgraded",
           IS_VISIBLE: "is-visible",
           IS_ANIMATING: "is-animating",
-          BOTTOM_LEFT: "m-menu--bottom-left",
-          BOTTOM_RIGHT: "m-menu--bottom-right",
-          TOP_LEFT: "m-menu--top-left",
-          TOP_RIGHT: "m-menu--top-right",
-          UNALIGNED: "m-menu--unaligned",
+          BOTTOM_LEFT: "mdl-menu--bottom-left",
+          BOTTOM_RIGHT: "mdl-menu--bottom-right",
+          TOP_LEFT: "mdl-menu--top-left",
+          TOP_RIGHT: "mdl-menu--top-right",
+          UNALIGNED: "mdl-menu--unaligned",
       }),
       (d.prototype.init = function () {
           if (this.element_) {
@@ -354,7 +354,7 @@
               e.classList.add(this.CssClasses_.CONTAINER), this.element_.parentElement.insertBefore(e, this.element_), this.element_.parentElement.removeChild(this.element_), e.appendChild(this.element_), (this.container_ = e);
               var t = document.createElement("div");
               t.classList.add(this.CssClasses_.OUTLINE), (this.outline_ = t), e.insertBefore(t, this.element_);
-              var s = this.element_.getAttribute("for") || this.element_.getAttribute("data-m-for"),
+              var s = this.element_.getAttribute("for") || this.element_.getAttribute("data-mdl-for"),
                   i = null;
               s && ((i = document.getElementById(s)), i && ((this.forElement_ = i), i.addEventListener("click", this.handleForClick_.bind(this)), i.addEventListener("keydown", this.handleForKeyboardEvent_.bind(this))));
               var n = this.element_.querySelectorAll("." + this.CssClasses_.ITEM);
@@ -484,53 +484,18 @@
           this.container_.classList.contains(this.CssClasses_.IS_VISIBLE) ? this.hide() : this.show(e);
       }),
       (d.prototype.toggle = d.prototype.toggle),
-      s.register({ constructor: d, classAsString: "MaterialMenu", cssClass: "m-js-menu", widget: !0 });
-  var h = function (e) {
-      (this.element_ = e), this.init();
-  };
-  (window.MaterialProgress = h),
-      (h.prototype.Constant_ = {}),
-      (h.prototype.CssClasses_ = { INDETERMINATE_CLASS: "m-progress__indeterminate" }),
-      (h.prototype.setProgress = function (e) {
-          this.element_.classList.contains(this.CssClasses_.INDETERMINATE_CLASS) || (this.progressbar_.style.width = e + "%");
-      }),
-      (h.prototype.setProgress = h.prototype.setProgress),
-      (h.prototype.setBuffer = function (e) {
-          (this.bufferbar_.style.width = e + "%"), (this.auxbar_.style.width = 100 - e + "%");
-      }),
-      (h.prototype.setBuffer = h.prototype.setBuffer),
-      (h.prototype.init = function () {
-          if (this.element_) {
-              var e = document.createElement("div");
-              (e.className = "progressbar bar bar1"),
-                  this.element_.appendChild(e),
-                  (this.progressbar_ = e),
-                  (e = document.createElement("div")),
-                  (e.className = "bufferbar bar bar2"),
-                  this.element_.appendChild(e),
-                  (this.bufferbar_ = e),
-                  (e = document.createElement("div")),
-                  (e.className = "auxbar bar bar3"),
-                  this.element_.appendChild(e),
-                  (this.auxbar_ = e),
-                  (this.progressbar_.style.width = "0%"),
-                  (this.bufferbar_.style.width = "100%"),
-                  (this.auxbar_.style.width = "0%"),
-                  this.element_.classList.add("is-upgraded");
-          }
-      }),
-      s.register({ constructor: h, classAsString: "MaterialProgress", cssClass: "m-js-progress", widget: !0 });
+      s.register({ constructor: d, classAsString: "MaterialMenu", cssClass: "mdl-js-menu", widget: !0 });
   var p = function (e) {
       (this.element_ = e), (this.isIE_ = window.navigator.msPointerEnabled), this.init();
   };
   (window.MaterialSlider = p),
       (p.prototype.Constant_ = {}),
       (p.prototype.CssClasses_ = {
-          IE_CONTAINER: "m-slider__ie-container",
-          SLIDER_CONTAINER: "m-slider__container",
-          BACKGROUND_FLEX: "m-slider__background-flex",
-          BACKGROUND_LOWER: "m-slider__background-lower",
-          BACKGROUND_UPPER: "m-slider__background-upper",
+          IE_CONTAINER: "mdl-slider__ie-container",
+          SLIDER_CONTAINER: "mdl-slider__container",
+          BACKGROUND_FLEX: "mdl-slider__background-flex",
+          BACKGROUND_LOWER: "mdl-slider__background-lower",
+          BACKGROUND_UPPER: "mdl-slider__background-upper",
           IS_LOWEST_VALUE: "is-lowest-value",
           IS_UPGRADED: "is-upgraded",
       }),
@@ -597,7 +562,7 @@
                   this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
           }
       }),
-      s.register({ constructor: p, classAsString: "MaterialSlider", cssClass: "m-js-slider", widget: !0 });
+      s.register({ constructor: p, classAsString: "MaterialSlider", cssClass: "mdl-js-slider", widget: !0 });
   var C = function (e) {
       if (((this.element_ = e), (this.textElement_ = this.element_.querySelector("." + this.cssClasses_.MESSAGE)), (this.actionElement_ = this.element_.querySelector("." + this.cssClasses_.ACTION)), !this.textElement_))
           throw new Error("There must be a message element for a snackbar.");
@@ -606,7 +571,7 @@
   };
   (window.MaterialSnackbar = C),
       (C.prototype.Constant_ = { ANIMATION_LENGTH: 250 }),
-      (C.prototype.cssClasses_ = { SNACKBAR: "m-snackbar", MESSAGE: "m-snackbar__text", ACTION: "m-snackbar__action", ACTIVE: "m-snackbar--active" }),
+      (C.prototype.cssClasses_ = { SNACKBAR: "mdl-snackbar", MESSAGE: "mdl-snackbar__text", ACTION: "mdl-snackbar__action", ACTIVE: "mdl-snackbar--active" }),
       (C.prototype.displaySnackbar_ = function () {
           this.element_.setAttribute("aria-hidden", "true"),
               this.actionHandler_ && ((this.actionElement_.textContent = this.actionText_), this.actionElement_.addEventListener("click", this.actionHandler_), this.setActionHidden_(!1)),
@@ -651,65 +616,21 @@
       (C.prototype.setActionHidden_ = function (e) {
           e ? this.actionElement_.setAttribute("aria-hidden", "true") : this.actionElement_.removeAttribute("aria-hidden");
       }),
-      s.register({ constructor: C, classAsString: "MaterialSnackbar", cssClass: "m-js-snackbar", widget: !0 });
-  var u = function (e) {
-      (this.element_ = e), this.init();
-  };
-  (window.MaterialSpinner = u),
-      (u.prototype.Constant_ = { m_SPINNER_LAYER_COUNT: 4 }),
-      (u.prototype.CssClasses_ = {
-          m_SPINNER_LAYER: "m-spinner__layer",
-          m_SPINNER_CIRCLE_CLIPPER: "m-spinner__circle-clipper",
-          m_SPINNER_CIRCLE: "m-spinner__circle",
-          m_SPINNER_GAP_PATCH: "m-spinner__gap-patch",
-          m_SPINNER_LEFT: "m-spinner__left",
-          m_SPINNER_RIGHT: "m-spinner__right",
-      }),
-      (u.prototype.createLayer = function (e) {
-          var t = document.createElement("div");
-          t.classList.add(this.CssClasses_.m_SPINNER_LAYER), t.classList.add(this.CssClasses_.m_SPINNER_LAYER + "-" + e);
-          var s = document.createElement("div");
-          s.classList.add(this.CssClasses_.m_SPINNER_CIRCLE_CLIPPER), s.classList.add(this.CssClasses_.m_SPINNER_LEFT);
-          var i = document.createElement("div");
-          i.classList.add(this.CssClasses_.m_SPINNER_GAP_PATCH);
-          var n = document.createElement("div");
-          n.classList.add(this.CssClasses_.m_SPINNER_CIRCLE_CLIPPER), n.classList.add(this.CssClasses_.m_SPINNER_RIGHT);
-          for (var a = [s, i, n], l = 0; l < a.length; l++) {
-              var o = document.createElement("div");
-              o.classList.add(this.CssClasses_.m_SPINNER_CIRCLE), a[l].appendChild(o);
-          }
-          t.appendChild(s), t.appendChild(i), t.appendChild(n), this.element_.appendChild(t);
-      }),
-      (u.prototype.createLayer = u.prototype.createLayer),
-      (u.prototype.stop = function () {
-          this.element_.classList.remove("is-active");
-      }),
-      (u.prototype.stop = u.prototype.stop),
-      (u.prototype.start = function () {
-          this.element_.classList.add("is-active");
-      }),
-      (u.prototype.start = u.prototype.start),
-      (u.prototype.init = function () {
-          if (this.element_) {
-              for (var e = 1; e <= this.Constant_.m_SPINNER_LAYER_COUNT; e++) this.createLayer(e);
-              this.element_.classList.add("is-upgraded");
-          }
-      }),
-      s.register({ constructor: u, classAsString: "MaterialSpinner", cssClass: "m-js-spinner", widget: !0 });
+      s.register({ constructor: C, classAsString: "MaterialSnackbar", cssClass: "mdl-js-snackbar", widget: !0 });
   var m = function (e) {
       (this.element_ = e), this.init();
   };
   (window.MaterialTabs = m),
       (m.prototype.Constant_ = {}),
       (m.prototype.CssClasses_ = {
-          TAB_CLASS: "m-tabs__tab",
-          PANEL_CLASS: "m-tabs__panel",
+          TAB_CLASS: "mdl-tabs__tab",
+          PANEL_CLASS: "mdl-tabs__panel",
           ACTIVE_CLASS: "is-active",
           UPGRADED_CLASS: "is-upgraded",
-          m_JS_RIPPLE_EFFECT: "m-js-ripple-effect",
-          m_RIPPLE_CONTAINER: "m-tabs__ripple-container",
-          m_RIPPLE: "m-ripple",
-          m_JS_RIPPLE_EFFECT_IGNORE_EVENTS: "m-js-ripple-effect--ignore-events",
+          m_JS_RIPPLE_EFFECT: "mdl-js-ripple-effect",
+          m_RIPPLE_CONTAINER: "mdl-tabs__ripple-container",
+          m_RIPPLE: "mdl-ripple",
+          m_JS_RIPPLE_EFFECT_IGNORE_EVENTS: "mdl-js-ripple-effect--ignore-events",
       }),
       (m.prototype.initTabs_ = function () {
           this.element_.classList.contains(this.CssClasses_.m_JS_RIPPLE_EFFECT) && this.element_.classList.add(this.CssClasses_.m_JS_RIPPLE_EFFECT_IGNORE_EVENTS),
@@ -727,93 +648,13 @@
       (m.prototype.init = function () {
           this.element_ && this.initTabs_();
       }),
-      s.register({ constructor: m, classAsString: "MaterialTabs", cssClass: "m-js-tabs" });
-  var L = function (e) {
-      (this.element_ = e), (this.maxRows = this.Constant_.NO_MAX_ROWS), this.init();
-  };
-  (window.MaterialTextfield = L),
-      (L.prototype.Constant_ = { NO_MAX_ROWS: -1, MAX_ROWS_ATTRIBUTE: "maxrows" }),
-      (L.prototype.CssClasses_ = {
-          LABEL: "m-textfield__label",
-          INPUT: "m-textfield__input",
-          IS_DIRTY: "is-dirty",
-          IS_FOCUSED: "is-focused",
-          IS_DISABLED: "is-disabled",
-          IS_INVALID: "is-invalid",
-          IS_UPGRADED: "is-upgraded",
-          HAS_PLACEHOLDER: "has-placeholder",
-      }),
-      (L.prototype.onKeyDown_ = function (e) {
-          var t = e.target.value.split("\n").length;
-          13 === e.keyCode && t >= this.maxRows && e.preventDefault();
-      }),
-      (L.prototype.onFocus_ = function (e) {
-          this.element_.classList.add(this.CssClasses_.IS_FOCUSED);
-      }),
-      (L.prototype.onBlur_ = function (e) {
-          this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
-      }),
-      (L.prototype.onReset_ = function (e) {
-          this.updateClasses_();
-      }),
-      (L.prototype.updateClasses_ = function () {
-          this.checkDisabled(), this.checkValidity(), this.checkDirty(), this.checkFocus();
-      }),
-      (L.prototype.checkDisabled = function () {
-          this.input_.disabled ? this.element_.classList.add(this.CssClasses_.IS_DISABLED) : this.element_.classList.remove(this.CssClasses_.IS_DISABLED);
-      }),
-      (L.prototype.checkDisabled = L.prototype.checkDisabled),
-      (L.prototype.checkFocus = function () {
-          Boolean(this.element_.querySelector(":focus")) ? this.element_.classList.add(this.CssClasses_.IS_FOCUSED) : this.element_.classList.remove(this.CssClasses_.IS_FOCUSED);
-      }),
-      (L.prototype.checkFocus = L.prototype.checkFocus),
-      (L.prototype.checkValidity = function () {
-          this.input_.validity && (this.input_.validity.valid ? this.element_.classList.remove(this.CssClasses_.IS_INVALID) : this.element_.classList.add(this.CssClasses_.IS_INVALID));
-      }),
-      (L.prototype.checkValidity = L.prototype.checkValidity),
-      (L.prototype.checkDirty = function () {
-          this.input_.value && this.input_.value.length > 0 ? this.element_.classList.add(this.CssClasses_.IS_DIRTY) : this.element_.classList.remove(this.CssClasses_.IS_DIRTY);
-      }),
-      (L.prototype.checkDirty = L.prototype.checkDirty),
-      (L.prototype.disable = function () {
-          (this.input_.disabled = !0), this.updateClasses_();
-      }),
-      (L.prototype.disable = L.prototype.disable),
-      (L.prototype.enable = function () {
-          (this.input_.disabled = !1), this.updateClasses_();
-      }),
-      (L.prototype.enable = L.prototype.enable),
-      (L.prototype.change = function (e) {
-          (this.input_.value = e || ""), this.updateClasses_();
-      }),
-      (L.prototype.change = L.prototype.change),
-      (L.prototype.init = function () {
-          if (this.element_ && ((this.label_ = this.element_.querySelector("." + this.CssClasses_.LABEL)), (this.input_ = this.element_.querySelector("." + this.CssClasses_.INPUT)), this.input_)) {
-              this.input_.hasAttribute(this.Constant_.MAX_ROWS_ATTRIBUTE) && ((this.maxRows = parseInt(this.input_.getAttribute(this.Constant_.MAX_ROWS_ATTRIBUTE), 10)), isNaN(this.maxRows) && (this.maxRows = this.Constant_.NO_MAX_ROWS)),
-                  this.input_.hasAttribute("placeholder") && this.element_.classList.add(this.CssClasses_.HAS_PLACEHOLDER),
-                  (this.boundUpdateClassesHandler = this.updateClasses_.bind(this)),
-                  (this.boundFocusHandler = this.onFocus_.bind(this)),
-                  (this.boundBlurHandler = this.onBlur_.bind(this)),
-                  (this.boundResetHandler = this.onReset_.bind(this)),
-                  this.input_.addEventListener("input", this.boundUpdateClassesHandler),
-                  this.input_.addEventListener("focus", this.boundFocusHandler),
-                  this.input_.addEventListener("blur", this.boundBlurHandler),
-                  this.input_.addEventListener("reset", this.boundResetHandler),
-                  this.maxRows !== this.Constant_.NO_MAX_ROWS && ((this.boundKeyDownHandler = this.onKeyDown_.bind(this)), this.input_.addEventListener("keydown", this.boundKeyDownHandler));
-              var e = this.element_.classList.contains(this.CssClasses_.IS_INVALID);
-              this.updateClasses_(),
-                  this.element_.classList.add(this.CssClasses_.IS_UPGRADED),
-                  e && this.element_.classList.add(this.CssClasses_.IS_INVALID),
-                  this.input_.hasAttribute("autofocus") && (this.element_.focus(), this.checkFocus());
-          }
-      }),
-      s.register({ constructor: L, classAsString: "MaterialTextfield", cssClass: "m-js-textfield", widget: !0 });
+      s.register({ constructor: m, classAsString: "MaterialTabs", cssClass: "mdl-js-tabs" });
   var I = function (e) {
       (this.element_ = e), this.init();
   };
   (window.MaterialTooltip = I),
       (I.prototype.Constant_ = {}),
-      (I.prototype.CssClasses_ = { IS_ACTIVE: "is-active", BOTTOM: "m-tooltip--bottom", LEFT: "m-tooltip--left", RIGHT: "m-tooltip--right", TOP: "m-tooltip--top" }),
+      (I.prototype.CssClasses_ = { IS_ACTIVE: "is-active", BOTTOM: "mdl-tooltip--bottom", LEFT: "mdl-tooltip--left", RIGHT: "mdl-tooltip--right", TOP: "mdl-tooltip--top" }),
       (I.prototype.handleMouseEnter_ = function (e) {
           var t = e.target.getBoundingClientRect(),
               s = t.left + t.width / 2,
@@ -839,7 +680,7 @@
       }),
       (I.prototype.init = function () {
           if (this.element_) {
-              var e = this.element_.getAttribute("for") || this.element_.getAttribute("data-m-for");
+              var e = this.element_.getAttribute("for") || this.element_.getAttribute("data-mdl-for");
               e && (this.forElement_ = document.getElementById(e)),
                   this.forElement_ &&
                       (this.forElement_.hasAttribute("tabindex") || this.forElement_.setAttribute("tabindex", "0"),
@@ -852,7 +693,7 @@
                       window.addEventListener("touchstart", this.boundMouseLeaveAndScrollHandler));
           }
       }),
-      s.register({ constructor: I, classAsString: "MaterialTooltip", cssClass: "m-tooltip" });
+      s.register({ constructor: I, classAsString: "MaterialTooltip", cssClass: "mdl-tooltip" });
   var f = function (e) {
       (this.element_ = e), this.init();
   };
@@ -861,29 +702,29 @@
       (f.prototype.Keycodes_ = { ENTER: 13, ESCAPE: 27, SPACE: 32 }),
       (f.prototype.Mode_ = { STANDARD: 0, SEAMED: 1, WATERFALL: 2, SCROLL: 3 }),
       (f.prototype.CssClasses_ = {
-          CONTAINER: "m-layout__container",
-          HEADER: "m-layout__header",
-          DRAWER: "m-layout__drawer",
-          CONTENT: "m-layout__content",
-          DRAWER_BTN: "m-layout__drawer-button",
+          CONTAINER: "mdl-layout__container",
+          HEADER: "mdl-layout__header",
+          DRAWER: "mdl-layout__drawer",
+          CONTENT: "mdl-layout__content",
+          DRAWER_BTN: "mdl-layout__drawer-button",
           ICON: "material-icons",
-          JS_RIPPLE_EFFECT: "m-js-ripple-effect",
-          RIPPLE_CONTAINER: "m-layout__tab-ripple-container",
-          RIPPLE: "m-ripple",
-          RIPPLE_IGNORE_EVENTS: "m-js-ripple-effect--ignore-events",
-          HEADER_SEAMED: "m-layout__header--seamed",
-          HEADER_WATERFALL: "m-layout__header--waterfall",
-          HEADER_SCROLL: "m-layout__header--scroll",
-          FIXED_HEADER: "m-layout--fixed-header",
-          OBFUSCATOR: "m-layout__obfuscator",
-          TAB_BAR: "m-layout__tab-bar",
-          TAB_CONTAINER: "m-layout__tab-bar-container",
-          TAB: "m-layout__tab",
-          TAB_BAR_BUTTON: "m-layout__tab-bar-button",
-          TAB_BAR_LEFT_BUTTON: "m-layout__tab-bar-left-button",
-          TAB_BAR_RIGHT_BUTTON: "m-layout__tab-bar-right-button",
-          TAB_MANUAL_SWITCH: "m-layout__tab-manual-switch",
-          PANEL: "m-layout__tab-panel",
+          JS_RIPPLE_EFFECT: "mdl-js-ripple-effect",
+          RIPPLE_CONTAINER: "mdl-layout__tab-ripple-container",
+          RIPPLE: "mdl-ripple",
+          RIPPLE_IGNORE_EVENTS: "mdl-js-ripple-effect--ignore-events",
+          HEADER_SEAMED: "mdl-layout__header--seamed",
+          HEADER_WATERFALL: "mdl-layout__header--waterfall",
+          HEADER_SCROLL: "mdl-layout__header--scroll",
+          FIXED_HEADER: "mdl-layout--fixed-header",
+          OBFUSCATOR: "mdl-layout__obfuscator",
+          TAB_BAR: "mdl-layout__tab-bar",
+          TAB_CONTAINER: "mdl-layout__tab-bar-container",
+          TAB: "mdl-layout__tab",
+          TAB_BAR_BUTTON: "mdl-layout__tab-bar-button",
+          TAB_BAR_LEFT_BUTTON: "mdl-layout__tab-bar-left-button",
+          TAB_BAR_RIGHT_BUTTON: "mdl-layout__tab-bar-right-button",
+          TAB_MANUAL_SWITCH: "mdl-layout__tab-manual-switch",
+          PANEL: "mdl-layout__tab-panel",
           HAS_DRAWER: "has-drawer",
           HAS_TABS: "has-tabs",
           HAS_SCROLLING_HEADER: "has-scrolling-header",
@@ -894,8 +735,8 @@
           IS_ACTIVE: "is-active",
           IS_UPGRADED: "is-upgraded",
           IS_ANIMATING: "is-animating",
-          ON_LARGE_SCREEN: "m-layout--large-screen-only",
-          ON_SMALL_SCREEN: "m-layout--small-screen-only",
+          ON_LARGE_SCREEN: "mdl-layout--large-screen-only",
+          ON_SMALL_SCREEN: "mdl-layout--small-screen-only",
       }),
       (f.prototype.contentScrollHandler_ = function () {
           if (!this.header_.classList.contains(this.CssClasses_.IS_ANIMATING)) {
@@ -1057,13 +898,13 @@
           }
       }),
       (window.MaterialLayoutTab = t),
-      s.register({ constructor: f, classAsString: "MaterialLayout", cssClass: "m-js-layout" });
+      s.register({ constructor: f, classAsString: "MaterialLayout", cssClass: "mdl-js-layout" });
   var S = function (e) {
       (this.element_ = e), this.init();
   };
   (window.MaterialRipple = S),
       (S.prototype.Constant_ = { INITIAL_SCALE: "scale(0.0001, 0.0001)", INITIAL_SIZE: "1px", INITIAL_OPACITY: "0.4", FINAL_OPACITY: "0", FINAL_SCALE: "" }),
-      (S.prototype.CssClasses_ = { RIPPLE_CENTER: "m-ripple--center", RIPPLE_EFFECT_IGNORE_EVENTS: "m-js-ripple-effect--ignore-events", RIPPLE: "m-ripple", IS_ANIMATING: "is-animating", IS_VISIBLE: "is-visible" }),
+      (S.prototype.CssClasses_ = { RIPPLE_CENTER: "mdl-ripple--center", RIPPLE_EFFECT_IGNORE_EVENTS: "mdl-js-ripple-effect--ignore-events", RIPPLE: "mdl-ripple", IS_ANIMATING: "is-animating", IS_VISIBLE: "is-visible" }),
       (S.prototype.downHandler_ = function (e) {
           if (!this.rippleElement_.style.width && !this.rippleElement_.style.height) {
               var t = this.element_.getBoundingClientRect();
@@ -1152,6 +993,6 @@
                   }));
           }
       }),
-      s.register({ constructor: S, classAsString: "MaterialRipple", cssClass: "m-js-ripple-effect", widget: !1 });
+      s.register({ constructor: S, classAsString: "MaterialRipple", cssClass: "mdl-js-ripple-effect", widget: !1 });
 })();
 //# sourceMappingURL=material.min.js.map

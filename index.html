@@ -5,63 +5,241 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="mate.css">
+  <link rel="stylesheet" href="mdl_modified/mdl.css">
+  <link rel="stylesheet" href="material.css">
   <!-- @FLATPICKER -->
   <link rel="stylesheet" href="plugins/flatpickr.min.css"/>
   <script src="plugins/flatpickr.min.js"></script>
-  <script src="mate.js"></script>
+  <script src="mdl_modified/mdl.js"></script>
   <title>Document</title>
 </head>
 <body>
   <!-- Always shows a header, even in smaller screens. -->
-  <div class="m-layout m-js-layout m-layout--fixed-header">
-    <header class="m-layout__header">
-      <div class="m-layout__header-row">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="m-layout-title">Title</span>
+        <span class="mdl-layout-title">Title</span>
         <!-- Add spacer, to align navigation to the right -->
-        <div class="m-layout-spacer"></div>
+        <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
-        <nav class="m-navigation m-layout--large-screen-only">
-          <a class="m-navigation__link" href="">Link</a>
-          <a class="m-navigation__link" href="">Link</a>
-          <a class="m-navigation__link" href="">Link</a>
-          <a class="m-navigation__link" href="">Link</a>
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
         </nav>
       </div>
     </header>
-    <div class="m-layout__drawer">
-      <span class="m-layout-title">Title</span>
-      <nav class="m-navigation">
-        <a class="m-navigation__link" href="">Link</a>
-        <a class="m-navigation__link" href="">Link</a>
-        <a class="m-navigation__link" href="">Link</a>
-        <a class="m-navigation__link" href="">Link</a>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
       </nav>
     </div>
-    <main class="m-layout__content">
-      <div class="page-content">
-         <label class="m-checkbox">
+    <main class="mdl-layout__content mdl-grid">
+      <div class="page-content mdl-cell mdl-cell--10-col material-padding">
+        <!-- Left aligned menu below button -->
+        <button id="demo-menu-lower-left"
+                class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+              for="demo-menu-lower-left">
+          <li class="mdl-menu__item">Some Action</li>
+          <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+          <li disabled class="mdl-menu__item">Disabled Action</li>
+          <li class="mdl-menu__item">Yet Another Action</li>
+        </ul>
+
+        <div class="material-alert-wrap material-success">
+          <input type="checkbox" id="material-alert-check">
+          <label for="material-alert-check">X</label>
+          <div class="material-alert">
+            <p>Surface rules! That is all.</p>
+          </div>
+        </div>
+
+        <div class="material-alert-wrap">
+          <div class="material-alert">
+            <p>Surface rules! That is all.</p>
+          </div>
+        </div>
+
+        <div class="material-alert-wrap material-info">
+          <div class="material-alert">
+            <p>Surface rules! That is all.</p>
+          </div>
+        </div>
+
+        <div class="material-alert-wrap material-error">
+          <div class="material-alert">
+            <p>Surface rules! That is all.</p>
+          </div>
+        </div>
+
+        <div class="material-alert-wrap material-warning">
+          <div class="material-alert">
+            <p>Surface rules! That is all.</p>
+          </div>
+        </div>
+        <!-- Progress Markup (determinate); Class: m-progress-linear -->
+        <progress class="material-progress-linear-lg"></progress>
+        <hr>
+
+        <!-- Progress Markup (indeterminate); Classes: m-progress-linear, m-progress-circular -->
+        <progress class="material-progress-linear"></progress>
+        <hr>
+
+        <!-- Progress Markup (determinate); Class: m-progress-linear -->
+        <progress class="material-progress-linear-lg" value="50" max="100"></progress>
+        <hr>
+
+        <!-- Progress Markup (determinate); Class: m-progress-linear -->
+        <progress class="material-progress-linear" value="50" max="100"></progress>
+
+        <hr>
+
+        <progress class="material-progress-circular"></progress>
+        <hr>
+        <h1> ma oe </h1>
+        <p>
+          Where does it come from?
+
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          Button
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent material-rounded">
+          Button
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent material-rounded-2">
+          Button
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Button
+        </button>
+        <br>
+        <br>
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Welcome</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sagittis pellentesque lacus eleifend lacinia...
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Get Started
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="material-icons">share</i>
+            </button>
+          </div>
+        </div>
+        <br>
+        <!-- Table -->
+        <table class="highlight mdl-shadow--2dp">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Table -->
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <br>
+        <!-- Raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised">
+          Button
+        </button>
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          Button
+        </button>
+        <!-- Raised disabled button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised" disabled>
+          Button
+        </button>
+
+        <label class="material-checkbox">
           <input type="checkbox">
           <span>Checkbox</span>
         </label>
         <hr>
-        <label class="m-radio">
+        <label class="material-radio">
           <input type="radio" name="group">
           <span>Radio</span>
         </label>
         <hr>
-        <label class="m-switch">
+        <label class="material-switch">
           <input type="checkbox" role="switch">
           <span>Switch</span>
         </label>
         <hr>
-        <label class="m-textfield-filled">
+        <label class="material-textfield-filled">
           <input placeholder=" "/>
           <span>Textfield</span>
         </label>
         <hr>
-        <label class="m-textfield-filled">
+        <label class="material-textfield-filled">
           <input type=number placeholder=" "/>
           <span>Number</span>
         </label>
@@ -72,31 +250,31 @@
 
         <br>
         <br>
-        <label class="m-textfield-filled">
+        <label class="material-textfield-filled">
           <input id="flatpickr-input" placeholder=" "/>
           <span>Datefield</span>
         </label>
         <hr>
 
-        <div class="m-select">
-          <select class="m-select-text" required>
+        <div class="material-select">
+          <select class="material-select-text" required>
             <option value="" disabled selected></option>
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
           </select>
-          <span class="m-select-highlight"></span>
-          <span class="m-select-bar"></span>
-          <label class="m-select-label">Select</label>
+          <span class="material-select-highlight"></span>
+          <span class="material-select-bar"></span>
+          <label class="material-select-label">Select</label>
         </div>
 
         <hr>
-        <label class="m-textfield-filled">
+        <label class="material-textfield-filled">
           <textarea placeholder=" "></textarea>
           <span>Textfield</span>
         </label>
         <hr>
-        <label class="m-textfield-outlined">
+        <label class="material-textfield-outlined">
           <input type="text" placeholder=" "/>
           <span>Outlined </span>
         </label>

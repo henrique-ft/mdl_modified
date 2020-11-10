@@ -6,6 +6,5 @@ removed (in .js and .css):
 - switch
 - progress
 - spinner
-
-changed
-- "mdl" prefix to "m"
+- mega-footer
+- colors

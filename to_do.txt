@@ -1,0 +1,11 @@
+- m-shadow { alterar os shadow defaults } ? TALVEZ
+-X m-form { remover os componentes de formulario atual (checkbox, radio, text, switch) adicionar os do "material" }
+- m-progress { remover os atuais adicionar os do "material" }
+- m-table { adicionar as tabelas do "material", remover as do mdl }
+- m-alert { adicionar os alerts do "material" }
+- m-helpers { adicionar os helpers do "material" }
+- m-lightbox { pegar do surface }
+- m-thumbnail { adicionar thumbnail do "material" }
+- m-grid { talvez trocar }
+- unificar cores do tema (mesmo formato)
+- "compressor" de arquivo que junta os 'mdl-changed' com os componentes adicionais.

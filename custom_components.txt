@@ -1,0 +1,10 @@
+custom components:
+
+- m-form {
+  - checkbox
+  - radio
+  - switch
+  - select field
+  - text field
+  - text field outlined
+}

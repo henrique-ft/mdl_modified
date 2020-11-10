@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="mate.css">
+  <!-- @FLATPICKER -->
+  <link rel="stylesheet" href="plugins/flatpickr.min.css"/>
+  <script src="plugins/flatpickr.min.js"></script>
+  <script src="mate.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="m-layout m-js-layout m-layout--fixed-header">
+    <header class="m-layout__header">
+      <div class="m-layout__header-row">
+        <!-- Title -->
+        <span class="m-layout-title">Title</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="m-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="m-navigation m-layout--large-screen-only">
+          <a class="m-navigation__link" href="">Link</a>
+          <a class="m-navigation__link" href="">Link</a>
+          <a class="m-navigation__link" href="">Link</a>
+          <a class="m-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+    </header>
+    <div class="m-layout__drawer">
+      <span class="m-layout-title">Title</span>
+      <nav class="m-navigation">
+        <a class="m-navigation__link" href="">Link</a>
+        <a class="m-navigation__link" href="">Link</a>
+        <a class="m-navigation__link" href="">Link</a>
+        <a class="m-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+    <main class="m-layout__content">
+      <div class="page-content">
+         <label class="m-checkbox">
+          <input type="checkbox">
+          <span>Checkbox</span>
+        </label>
+        <hr>
+        <label class="m-radio">
+          <input type="radio" name="group">
+          <span>Radio</span>
+        </label>
+        <hr>
+        <label class="m-switch">
+          <input type="checkbox" role="switch">
+          <span>Switch</span>
+        </label>
+        <hr>
+        <label class="m-textfield-filled">
+          <input placeholder=" "/>
+          <span>Textfield</span>
+        </label>
+        <hr>
+        <label class="m-textfield-filled">
+          <input type=number placeholder=" "/>
+          <span>Number</span>
+        </label>
+
+        <hr>
+        <!-- @FLATPICKER -->
+        Using flatpicker, that can be used only for time too https://flatpickr.js.org/examples/ and has a .destroy() method to use with turbolinks
+
+        <br>
+        <br>
+        <label class="m-textfield-filled">
+          <input id="flatpickr-input" placeholder=" "/>
+          <span>Datefield</span>
+        </label>
+        <hr>
+
+        <div class="m-select">
+          <select class="m-select-text" required>
+            <option value="" disabled selected></option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <span class="m-select-highlight"></span>
+          <span class="m-select-bar"></span>
+          <label class="m-select-label">Select</label>
+        </div>
+
+        <hr>
+        <label class="m-textfield-filled">
+          <textarea placeholder=" "></textarea>
+          <span>Textfield</span>
+        </label>
+        <hr>
+        <label class="m-textfield-outlined">
+          <input type="text" placeholder=" "/>
+          <span>Outlined </span>
+        </label>
+        <hr>
+      </div>
+    </main>
+  </div>
+  <!-- @FLATPICKER -->
+  <script>
+    flatpickr(document.getElementById("flatpickr-input"),{
+      dateFormat: 'd/m/Y',
+      locale: {
+        firstDayOfWeek: 1,
+        weekdays: {
+          shorthand: ['seg', 'ter', 'qua', 'qui', 'sex', 'sab', 'dom'],
+          longhand: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+        },
+        months: {
+          shorthand: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dex'],
+          longhand: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        },
+      },
+    })
+  </script>
+</body>
+</html>

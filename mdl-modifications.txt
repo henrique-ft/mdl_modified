@@ -1,0 +1,11 @@
+removed (in .js and .css):
+- data-table
+- checkbox
+- textfield
+- radiobutton
+- switch
+- progress
+- spinner
+
+changed
+- "mdl" prefix to "m"
